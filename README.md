@@ -22,9 +22,9 @@ Go to settings.json and set `username` and `password` to the username and passwo
 9. Finally type `git push heroku master` [Enter] and let it go through. If all goes well it will deploy after a minute or two and will tell you the url of your server around the end of the process.
 
 ## Updating
-To update the server files on heroku (esp. server.js):
+To update the server files on heroku (esp. n_arcserver.js):
 
-1. Go to your original roblox-js-server folder and delete all files EXCEPT settings.json (unless you want to reenter info)
+1. Go to your original n_arcserver folder and delete all files EXCEPT settings.json (unless you want to reenter info)
 2. [Redownload](https://github.com/n-arc/n_arclogger/archive/master.zip) the repository.
 3. Drag all the files in the new folder you downloaded into the old one EXCEPT for settings.json
 4. Open a terminal or command prompt and type `cd `, then drag the folder into the window and release. Hit enter.
@@ -46,10 +46,10 @@ A module script is available in [n_arcserver.mod.lua](n_arcserver.mod.lua) that 
 
 The commands `promote`, `demote`, `setRank`, `shout`, `post`, `handleJoinRequest`, `forumPostNew`, `forumPostReply`, and `message` are available, all arguments are in the same order as they are in the documentation, with parameters first and then each body argument in order (excluding key). The return value of the function is the decoded table that the API returns.
 
-Example usage, assuming ModuleScript is named "Server" and is in the same directory as the script (eg. both ServerScriptService):
+Example usage, assuming ModuleScript is named "n_arcserver" and is in the same directory as the script (eg. both ServerScriptService):
 ```lua
-local server = require(script.Parent.Server)
-local domain = 'rbx-js.herokuapp.com' -- Make sure there is no http:// in here!
+local server = require(script.Parent.n_arcserver)
+local domain = 'n_arc.herokuapp.com' -- Make sure there is no http:// in here!
 local key = '/UAO9lTOYapr8ecV8cs/t3cP9c7na6rKHfRn7M6GDct+PdJyQJ40Jebe+CKZDgKV8TRLtbBqfhJc/eHNC7RHA8BCKkrFOkaIKC9/ripy34QzLq3m2qqy/GdyCg/5KHFUPbsuRNetr52ZP+6E2puKWrR9XvuAMG9bq+X02luwmID6aU7YBpq7sALl21Pv0OB4wy43VhuI3esN8w/Rl0ZC3LiJWwMv8PnwCKqgmq9L9UXLVBEPNJ9Plcv73+QqArHqiZ/qtrJO88='
 local groupId = 18
 local userId = game:GetService'Players':GetUserIdFromNameAsync'Shedletsky'
