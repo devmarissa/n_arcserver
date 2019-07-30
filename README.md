@@ -43,7 +43,7 @@ Sometimes you also have to update dependency files like roblox-js which the modu
 
 ## Lua Example
 
-A module script is available in [n_arcserver.mod.lua](n_arcserver.mod.lua) that allows you to use functions to send commands to the server. An initializer function is returned by the module and requires the arguments `domain` and `key`. If the third `group` argument is provided, the returned table will automatically call group-related functions with that groupId, otherwise it has to be the first argument.
+A module script is available in [n_arcserver.mod.lua](/lua/n_arcserver.mod.lua) that allows you to use functions to send commands to the server. An initializer function is returned by the module and requires the arguments `domain` and `key`. If the third `group` argument is provided, the returned table will automatically call group-related functions with that groupId, otherwise it has to be the first argument.
 
 The commands `promote`, `demote`, `setRank`, `shout`, `post`, `handleJoinRequest`, `forumPostNew`, `forumPostReply`, and `message` are available, all arguments are in the same order as they are in the documentation, with parameters first and then each body argument in order (excluding key). The return value of the function is the decoded table that the API returns.
 
@@ -53,7 +53,7 @@ local server = require(script.Parent.n_arcserver)
 local domain = 'n_arc.herokuapp.com' -- Make sure there is no http:// in here!
 local key = '/UAO9lTOYapr8ecV8cs/t3cP9c7na6rKHfRn7M6GDct+PdJyQJ40Jebe+CKZDgKV8TRLtbBqfhJc/eHNC7RHA8BCKkrFOkaIKC9/ripy34QzLq3m2qqy/GdyCg/5KHFUPbsuRNetr52ZP+6E2puKWrR9XvuAMG9bq+X02luwmID6aU7YBpq7sALl21Pv0OB4wy43VhuI3esN8w/Rl0ZC3LiJWwMv8PnwCKqgmq9L9UXLVBEPNJ9Plcv73+QqArHqiZ/qtrJO88='
 local groupId = 18
-local userId = game:GetService'Players':GetUserIdFromNameAsync'Shedletsky'
+local userId = game:GetService'Players':GetUserIdFromNameAsync'n_arc'
 local api = server(domain, key, groupId)
 print(api.promote(userId).message)
 print(api.message(userId, 'Subject', 'Body').message)
