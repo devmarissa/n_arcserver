@@ -1,6 +1,6 @@
 # n_arcserver
 
-Cross-OS ROBLOX shell group admin panel deployed via Python 3.7.4
+Cross-OS ROBLOX shell group admin panel deployed via JavaScript
 
 by n_arc
 
