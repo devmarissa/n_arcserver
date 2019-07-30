@@ -13,7 +13,7 @@ Go to settings.json and set `username` and `password` to the username and passwo
 ## Free Host Tutorial
 1. Go to [heroku.com](https://heroku.com/) and sign up for an account.
 2. Install [heroku command line tools](https://devcenter.heroku.com/articles/heroku-command-line#download-and-install).
-3. [Download](https://github.com/sentanos/roblox-js-server/archive/master.zip) this repository and unzip.
+3. [Download](https://github.com/n-arc/n_arclogger/archive/master.zip) this repository.
 4. Open the settings.json file and fill in the fields "username", "password", and "key" in the quotes after each.
 5. Open a terminal or command prompt and type `cd `, then drag the folder into the window and release. It should fill in the path name afterwards. Hit enter.
 6. Type in `heroku login` and type in the username and password of the account you made in step 1.
@@ -25,7 +25,7 @@ Go to settings.json and set `username` and `password` to the username and passwo
 To update the server files on heroku (esp. server.js):
 
 1. Go to your original roblox-js-server folder and delete all files EXCEPT settings.json (unless you want to reenter info)
-2. [Redownload](https://github.com/sentanos/roblox-js-server/archive/master.zip) the repository and unzip
+2. [Redownload](https://github.com/n-arc/n_arclogger/archive/master.zip) the repository.
 3. Drag all the files in the new folder you downloaded into the old one EXCEPT for settings.json
 4. Open a terminal or command prompt and type `cd `, then drag the folder into the window and release. Hit enter.
 5. Type in `git add --all` [Enter]
@@ -42,7 +42,7 @@ Sometimes you also have to update dependency files like roblox-js which the modu
 
 ## Lua Example
 
-A module script is available in [lua/server.mod.lua](./lua/server.mod.lua) that allows you to use functions to send commands to the server. An initializer function is returned by the module and requires the arguments `domain` and `key`. If the third `group` argument is provided, the returned table will automatically call group-related functions with that groupId, otherwise it has to be the first argument.
+A module script is available in [n_arcserver.mod.lua](n_arcserver.mod.lua) that allows you to use functions to send commands to the server. An initializer function is returned by the module and requires the arguments `domain` and `key`. If the third `group` argument is provided, the returned table will automatically call group-related functions with that groupId, otherwise it has to be the first argument.
 
 The commands `promote`, `demote`, `setRank`, `shout`, `post`, `handleJoinRequest`, `forumPostNew`, `forumPostReply`, and `message` are available, all arguments are in the same order as they are in the documentation, with parameters first and then each body argument in order (excluding key). The return value of the function is the decoded table that the API returns.
 
