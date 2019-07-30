@@ -1,6 +1,6 @@
 # n_arcserver
 
-Cross-OS ROBLOX shell group admin panel deployed via JavaScript
+ROBLOX user admin shell deployed in-game
 
 by n_arc
 
