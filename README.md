@@ -1,6 +1,6 @@
 # n_arcserver
 
-ROBLOX user admin shell deployed in-game
+ROBLOX user admin shell deployed in-game via JavaScript
 
 by n_arc
 
